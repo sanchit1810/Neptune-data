@@ -1,9 +1,9 @@
 @font-face {
-  font-family: "DM Serif Display";
+  font-family: Manrope;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-display: swap;
-  src: url("/fonts/dm-serif-display.woff2") format("woff2");
+  src: url("/fonts/manrope-500.woff2") format("woff2");
 }
 @font-face {
   font-family: Inter;
@@ -37,6 +37,8 @@
   --line: #dce2e8;
   --navy: #071623;
   --paper: #fbfcfd;
+  --font-display: Manrope, Inter, Arial, sans-serif;
+  --font-body: Inter, Arial, sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -78,7 +80,7 @@ p {
 }
 h1,
 h2 {
-  font-family: "DM Serif Display", Georgia, serif;
+  font-family: var(--font-display);
   font-weight: 400;
 }
 a:focus-visible,

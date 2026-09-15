@@ -1,3 +1,4 @@
+import ContactForm from "./ContactForm.jsx";
 import { categoryContent } from "./content.jsx";
 import { useEffect, useState } from "react";
 import "./index.css";
@@ -409,19 +410,7 @@ function Contact({ kind = "general" }) {
               : "Tell us what your model needs to learn, or what data your organisation holds."}
         </p>
       </div>
-      <a
-        className="contact-email"
-        href={mail(
-          voice
-            ? "Customer-service data enquiry"
-            : clinical
-              ? "Healthcare data enquiry"
-              : "Neptune Data enquiry",
-        )}
-      >
-        {email}
-        <Arrow />
-      </a>
+      <ContactForm kind={kind} />
     </section>
   );
 }
