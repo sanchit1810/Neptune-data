@@ -800,17 +800,6 @@ h2 {
   font-size: 1rem;
   max-width: 540px;
 }
-.related {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 40px;
-  font-size: 0.875rem;
-  color: var(--muted);
-}
-.related a {
-  color: var(--ink);
-}
 .missing {
   min-height: 65vh;
 }
@@ -1028,12 +1017,6 @@ h2 {
   .category-partner .text-link {
     margin-top: 25px;
   }
-  .related {
-    gap: 30px;
-  }
-  .related > span {
-    max-width: 130px;
-  }
   .footer {
     margin-top: 38px;
   }
@@ -1121,14 +1104,6 @@ h2 {
   }
   .contact-email {
     font-size: 0.875rem;
-  }
-  .related {
-    align-items: start;
-  }
-  .related .text-link {
-    padding-top: 0;
-    font-size: 0.8125rem;
-    gap: 15px;
   }
   .footer {
     padding-top: 28px;

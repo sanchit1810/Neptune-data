@@ -14,9 +14,19 @@ September 2026 redesign, based on the original React/Vite website.
 Use Node 22 or newer. Run `npm ci`, then `npm run dev`.
 `npm run build` generates pre-rendered HTML and the hydration bundle in `dist/client`, and a Cloudflare Worker in `dist/server`.
 `npm run dev` runs Vite plus the enquiry API backed by a local SQLite database in the ignored `.local` directory. `npm test` checks the API against SQLite.
-Production uses Sites-managed D1 through the `DB` binding. Run `npm run db:generate` for schema changes and retain generated Drizzle migrations. Sites applies these before publication.
+Both hosting targets use a D1 database through the `DB` binding. Run `npm run db:generate` for schema changes and retain generated Drizzle migrations. Sites applies these before publication; apply them explicitly to the Cloudflare Pages database before deploying schema-dependent changes.
 
-The original GitHub / Cloudflare production site is separate from the private Sites review deployment configured in `.openai/hosting.json`.
+## Cloudflare Pages production
+
+Production: https://neptunedata.ai, Pages project `neptune-data` in account `9f55e69f12cace82a34fe545ef82140d`.
+The connected GitHub repository is `sanchit1810/Neptune-data`, production branch `main`.
+Build command: `npm run build:pages`; output: `dist/pages`.
+The build bundles the enquiry handler as `_worker.js`; `_routes.json` limits function execution to `/api/*`.
+D1 binding: `DB` points to `neptune-data-enquiries` (`dcd24948-d6af-4baa-bb20-f7e0b66aa971`).
+The initial schema is `drizzle/0000_glorious_chronomancer.sql`, applied through the Cloudflare D1 console.
+Read submissions in Cloudflare: Storage & databases > D1 > neptune-data-enquiries > Explore Data.
+
+The private Sites review deployment in `.openai/hosting.json` is separate, including its enquiry database. `npm run build` remains the Sites build target.
 
 ## Design and content
 

@@ -541,16 +541,6 @@ function Category({ data }) {
         </a>
       </section>
       <Contact kind={data.kind} />
-      <div className="related wrap">
-        <span>Explore our other focus</span>
-        <a
-          className="text-link"
-          href={data.kind === "voice" ? "/healthcare/" : "/customer-service/"}
-        >
-          {data.kind === "voice" ? "Healthcare data" : "Customer-service data"}{" "}
-          <Arrow />
-        </a>
-      </div>
     </>
   );
 }
