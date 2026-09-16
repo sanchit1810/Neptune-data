@@ -1,7 +1,7 @@
 export const categoryContent = {
   "/customer-service": {
     kind: "voice",
-    eyebrow: "01 / Customer-service data",
+    eyebrow: "01 / Voice & conversation data",
     title: (
       <>
         Real conversations.
@@ -18,7 +18,7 @@ export const categoryContent = {
     groups: [
       [
         "Conversation audio",
-        "Natural customer-service interactions, with language, acoustic conditions, and speaker separation assessed against the task.",
+        "Natural spoken interactions, with language, acoustic conditions, and speaker separation assessed against the task.",
         "Speech recognition · Turn-taking",
       ],
       [
@@ -58,7 +58,7 @@ export const categoryContent = {
         "We start with a defined requirement and assess relevant sources. The fields shown here describe what a useful dataset may contain, rather than a promise of inventory or a fixed volume.",
       ],
       [
-        "Can audio be linked to customer-service outcomes?",
+        "Can audio be linked to conversation outcomes?",
         "Where source systems retain the linkage and the proposed use is permitted, outcomes can form part of the scope. We first establish what was recorded and what can be retained after preparation.",
       ],
       [
@@ -142,10 +142,10 @@ export function getPageMeta(path) {
   const data = categoryContent[normalized];
   return {
     title: data
-      ? `${data.kind === "voice" ? "Customer-service data" : "Healthcare data"} | Neptune Data`
+      ? `${data.kind === "voice" ? "Voice & conversation data" : "Healthcare data"} | Neptune Data`
       : "Neptune Data | Real-world data for AI",
     description: data
       ? data.intro
-      : "Proprietary customer-service and healthcare data for AI training and evaluation. Sourcing, preparation, rights review and licensing.",
+      : "Proprietary voice, conversation and healthcare data for AI training and evaluation. Sourcing, preparation, rights review and licensing.",
   };
 }

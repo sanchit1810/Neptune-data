@@ -47,7 +47,7 @@ function Header({ path }) {
             href="/customer-service/"
             aria-current={path === "/customer-service" ? "page" : undefined}
           >
-            Customer service
+            Voice & conversation
           </a>
           <a
             href="/healthcare/"
@@ -120,10 +120,6 @@ function Hero() {
             The permission.
           </p>
         </div>
-        <div className="art-caption">
-          <span>From institutional records to model-ready data</span>
-          <span>Neptune Data / 01</span>
-        </div>
       </div>
     </>
   );
@@ -142,10 +138,10 @@ function Footer() {
 const focusAreas = [
   {
     id: "01",
-    label: "Customer service",
+    label: "Voice & conversation",
     path: "/customer-service/",
     title: "The conversation.\nAnd what happened next.",
-    body: "Customer-service speech, linked context, and outcomes for voice and conversational AI.",
+    body: "Speech, conversation context, and outcomes for voice and conversational AI.",
     tags: ["Speech", "Conversation", "Outcomes"],
     kind: "voice",
   },
@@ -521,7 +517,7 @@ function Category({ data }) {
           <p className="eyebrow">For institutions & data holders</p>
           <h3>
             {data.kind === "voice"
-              ? "Work with customer-service records?"
+              ? "Work with voice or conversation data?"
               : "Hold specialist clinical records?"}
           </h3>
           <p>
@@ -533,7 +529,7 @@ function Category({ data }) {
           className="text-link"
           href={mail(
             data.kind === "voice"
-              ? "Customer-service data partnership"
+              ? "Voice and conversation data partnership"
               : "Healthcare data partnership",
           )}
         >

@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 
 const topics = [
-  ["customer-service", "Customer-service data"],
+  ["customer-service", "Voice & conversation data"],
   ["healthcare", "Healthcare data"],
   ["data-partnership", "Data partnership"],
   ["other", "Something else"],
