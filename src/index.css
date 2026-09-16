@@ -106,12 +106,6 @@ summary:focus-visible {
   align-items: center;
   gap: 12px;
 }
-.short-rule {
-  display: inline-block;
-  width: 26px;
-  height: 1px;
-  background: currentColor;
-}
 .skip-link {
   position: fixed;
   left: 20px;

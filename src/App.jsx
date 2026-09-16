@@ -81,7 +81,6 @@ function Hero() {
     <>
       <section className="hero wrap">
         <div className="eyebrow">
-          <span className="short-rule" />
           Proprietary data for AI
         </div>
         <div className="hero-grid">
